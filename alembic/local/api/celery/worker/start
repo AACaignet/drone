@@ -1,0 +1,6 @@
+#!/bin/bash
+
+set -o errexit
+set -o nounset
+
+celery -A api.celery.celery_tasks.app worker --loglevel=INFO
